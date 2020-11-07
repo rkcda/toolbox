@@ -19,6 +19,6 @@
        <img src="https://github.com/vapor/toolbox/workflows/Test%20Matrix/badge.svg" alt="Continuous Integration via GitHub">
    </a>
    <a href="https://swift.org">
-       <img src="http://img.shields.io/badge/swift-5.2-brightgreen.svg" alt="Swift 5.2">
+       <img src="http://img.shields.io/badge/swift-5.3-brightgreen.svg" alt="Swift 5.3">
    </a>
 </p>
