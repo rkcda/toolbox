@@ -11,7 +11,7 @@ steps:
   image: nedaya/alpine-git
   commands:
     - git remote add source https://github.com/vapor/toolbox.git
-    - git pull source
+    - git pull source master
 
 - name: push commit
   image: appleboy/drone-git-push
