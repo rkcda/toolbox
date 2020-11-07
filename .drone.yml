@@ -1,5 +1,25 @@
 kind: pipeline
 type: docker
+name: tests
+
+platform:
+  os: linux
+  arch: amd64 
+
+steps:
+- name: udpate
+  image: nedaya/alpine-git
+  commands:
+    - git remote add source https://github.com/vapor/toolbox.git
+    - git pull source master
+- name: test
+  image: swift:5.3
+  commands:
+    - swift test --enable-test-discovery --sanitize=thread
+---
+
+kind: pipeline
+type: docker
 name: update
 
 platform:
@@ -19,6 +39,9 @@ steps:
     remote_name: origin
     branch: master
     local_ref: master
+
+depends_on:
+- tests
 ---   
 
 kind: pipeline
