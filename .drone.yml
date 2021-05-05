@@ -31,14 +31,14 @@ steps:
   image: nedaya/alpine-git
   commands:
     - git remote add source https://github.com/vapor/toolbox.git
-    - git pull source master
+    - git pull source main
 
 - name: push commit
   image: appleboy/drone-git-push
   settings:
     remote_name: origin
     branch: master
-    local_ref: master
+    local_ref: main
 
 depends_on:
 - tests
